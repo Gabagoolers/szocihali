@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+        "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
+        "https://checkstyle.org/dtds/configuration_1_3.dtd">
+
+<module name="Checker">
+
+    <!-- Max file length -->
+    <module name="FileLength">
+        <property name="max" value="500"/>
+        <property name="fileExtensions" value="java"/>
+    </module>
+
+    <module name="TreeWalker">
+
+        <!-- ===== NAMING CONVENTIONS ===== -->
+        <module name="TypeName"/>               <!-- Classes/interfaces: PascalCase -->
+        <module name="MethodName"/>             <!-- Methods: camelCase -->
+        <module name="LocalVariableName"/>      <!-- Local variables: camelCase -->
+        <module name="ConstantName"/>           <!-- Constants: UPPER_CASE -->
+        <module name="StaticVariableName"/>     <!-- Static fields: camelCase -->
+        <module name="MemberName"/>             <!-- Instance fields: camelCase -->
+        <module name="ParameterName"/>          <!-- Method parameters: camelCase -->
+
+        <!-- ===== IMPORTS ===== -->
+        <module name="AvoidStarImport"/>        <!-- No wildcard imports (java.util.*) -->
+        <module name="UnusedImports"/>          <!-- No unused imports -->
+
+        <!-- ===== WHITESPACE ===== -->
+        <module name="WhitespaceAround"/>       <!-- Spaces around operators -->
+        <module name="WhitespaceAfter"/>        <!-- Space after commas, semicolons -->
+        <module name="NoWhitespaceBefore"/>     <!-- No space before ; or , -->
+        <module name="GenericWhitespace"/>      <!-- Correct whitespace around generics -->
+
+        <!-- ===== BRACES ===== -->
+        <module name="NeedBraces"/>             <!-- Always use {} even for single-line ifs -->
+        <module name="LeftCurly"/>              <!-- Opening brace on same line -->
+        <module name="RightCurly"/>             <!-- Closing brace on its own line -->
+
+        <!-- ===== SIZE / COMPLEXITY ===== -->
+        <module name="MethodLength">
+            <property name="max" value="50"/>     <!-- Max 50 lines per method -->
+        </module>
+        <module name="ParameterNumber">
+            <property name="max" value="7"/>      <!-- Max 7 parameters per method -->
+        </module>
+
+        <!-- ===== BEST PRACTICES ===== -->
+        <module name="EmptyBlock"/>             <!-- No empty blocks (catch, if, etc.) -->
+        <module name="EqualsHashCode"/>         <!-- Override hashCode() if equals() is overridden -->
+        <module name="SimplifyBooleanExpression"/>  <!-- No unnecessary boolean expressions -->
+        <module name="SimplifyBooleanReturn"/>      <!-- No unnecessary boolean returns -->
+        <module name="StringLiteralEquality"/>      <!-- No string == comparison, use .equals() -->
+        <module name="FinalLocalVariable"/>         <!-- Declare variables as final if not reassigned -->
+        <module name="MultipleVariableDeclarations"/> <!-- One variable per declaration -->
+        <module name="OneStatementPerLine"/>         <!-- One statement per line -->
+
+
+    </module>
+
+</module>
